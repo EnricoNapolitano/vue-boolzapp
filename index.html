@@ -58,29 +58,11 @@
 
                 <!-- contacts list  -->
                 <div class="contacts">
-                    <div class="contact d-flex">
+                    <div v-for="contact in contacts" class="contact d-flex">
                         <div class="circle-frame ms-3 mt-3">
-                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
+                            <img class="img-fluid" v-bind:src="`img/avatar${contact.avatar}.jpg`" alt="`foto di ${contact.name}`">
                         </div>
-                        <span class="ps-2 pt-3">Michele</span>
-                    </div>
-                    <div class="contact d-flex">
-                        <div class="circle-frame ms-3 mt-3">
-                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
-                        </div>
-                        <span class="ps-2 pt-3">Michele</span>
-                    </div>
-                    <div class="contact d-flex">
-                        <div class="circle-frame ms-3 mt-3">
-                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
-                        </div>
-                        <span class="ps-2 pt-3">Michele</span>
-                    </div>
-                    <div class="contact d-flex">
-                        <div class="circle-frame ms-3 mt-3">
-                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
-                        </div>
-                        <span class="ps-2 pt-3">Michele</span>
+                        <span class="ps-2 pt-3">{{ contact.name }}</span>
                     </div>
                 </div>
             </div>
