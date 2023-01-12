@@ -1,0 +1,9 @@
+/*** CUSTOMS ****/
+/* color palette */
+:root {
+    --green-bg: #009688;
+    --grey-bg: #dbdbd3;
+    --grey-hd: #eaeaea;
+    --grey-ft: #f3eeea;
+    --blue-alert: #8edafc;
+}
