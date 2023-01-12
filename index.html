@@ -11,19 +11,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- vue js 
+    <!-- vue js
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <!-- script
     <script defer src="js/script.js"></script> -->
 </head>
 <body>
-    <div class="main-bg brd-b">
+    <div class="main-bg">
 
         <!--***** USER INTERFACE *****-->
-        <div id="ui" class="d-flex justify-content-center brd-r">
+        <div id="ui" class="d-flex justify-content-center">
 
             <!-- ITEMS COL -->
-            <div id="items" class="brd-b">
+            <div id="items">
 
                 <header class="d-flex justify-content-between align-items-center">
                     <div id="user-profile" class="d-flex align-items-center">
@@ -45,8 +45,8 @@
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
                     <div class="ps-2">
-                        <span>Ricevi notifiche di nuovi messaggi</span> <br>
-                        <a href="#">Attiva notifiche desktop</a>
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a class="d-block" href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
 
@@ -86,16 +86,59 @@
             </div>
 
             <!-- CHAT COL -->
-            <div id="chat" class="d-flex flex-column justify-content-between brd-b">
+            <div id="chat" class="d-flex flex-column justify-content-between ">
 
-                <header></header>
+                <header class="d-flex justify-content-between align-items-center">
+                    <!-- specific user you're chatting with -->
+                    <div class="d-flex align-items-center">
+                        <div class="circle-frame ms-4">
+                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
+                        </div>
+                        <div>
+                            <span class="ps-4">Michele</span>
+                            <span class="last-message d-block ps-4">Ultimo messaggio alle</span>
+                        </div>
+                    </div>
+                    <!-- icons -->
+                    <div class="pe-3">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-sharp fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical pe-3"></i>
+                    </div>
+                </header>
 
                 <!-- messages portview -->
                 <div class="messages">
-                    
+
+                    <!-- sent messages -->
+                    <div class="sent-msg d-flex flex-column align-items-end pe-5">
+                        <div class="msg-area">
+                            <span>Hai portato a spasso il cane?</span>
+                            <span class="time">01/12/2023 16:55</span>
+                        </div>
+                        <div class="msg-area">
+                            <span>Gli hai dato da mangiare?</span>
+                            <span class="time">01/12/2023 16:55</span>
+                        </div>
+                    </div>
+
+                    <!-- received messages -->
+                    <div class="received-msg ps-5">
+                        <div class="msg-area">
+                            <span>Tutto fatto!</span>
+                            <span class="time">01/12/2023 16:55</span>
+                        </div>
+                    </div>
+
                 </div>
 
-                <footer></footer>
+                <footer class="d-flex justify-content-between align-items-center">
+                    <i class="fa-regular fa-face-smile ps-4"></i>
+                    <div class="message-input">
+                        <input class="w-100 ps-4" type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <i class="fa-solid fa-microphone pe-4"></i>
+                </footer>
             </div>
         </div>
     </div>
