@@ -6,6 +6,7 @@
     --grey-hd: #eaeaea;
     --grey-ft: #f3eeea;
     --grey-src: #fafafa;
+    --grey-icn: #b1b1b1;
     --blue-alert: #8edafc;
 }
 
@@ -41,6 +42,20 @@ header {
 .brd-y {
     border: 1px dashed yellow;
 }
+/* font awesome */
+.fa-solid {
+    font-size: 25px;
+    padding: 10px;
+    color: var(--grey-icn);
+}
+.bell .fa-solid {
+    color: var(--blue-alert);
+}
+.fa-magnifying-glass {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+}
 
 
 
@@ -50,13 +65,22 @@ header {
     width : 90vw;
     height: 90vh;
 }
-/* items */
+/* ITEMS */
 #items {
     width: 30%;
     background-color: white;
 }
-#chat {
-    width: 70%;
+header span {
+    font-size: 20px;
+}
+.circle-frame {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.bell {
+    background-color: white;
 }
 .b-alert {
     height: 80px;
@@ -65,12 +89,31 @@ header {
 .src {
     height: 50px;
     background-color: var(--grey-src);
+    position: relative;
+}
+.src input {
+    width: 90%;
+    height: 35px;
+    padding-left: 85px;
+    border: none;
 }
 .contacts {
     height: calc(90vh - 200px);
     overflow-y: scroll;
 }
-/* chat */
+.contact .circle-frame {
+    width: 60px;
+    height: 60px;
+}
+.contact {
+    font-size: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--grey-src);
+}
+/* CHAT */
+#chat {
+    width: 70%;
+}
 .messages {
     height: calc(90vh - 140px);
     background-image: url("../img/mine.jpg");
