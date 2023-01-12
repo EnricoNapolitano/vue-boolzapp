@@ -5,18 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
-    <!-- FONT AWESOME -->
+    <!-- font aws -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- BOOTSTRAP -->
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- MY STYLE -->
+    <!-- style -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- VUE JS 
+    <!-- vue js 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <!-- MY SCRIPT 
+    <!-- script
     <script defer src="js/script.js"></script> -->
 </head>
 <body>
-    <div class="main-bg"></div>
+    <div class="main-bg brd-b">
+
+        <!--***** USER INTERFACE *****-->
+        <div id="ui" class="d-flex justify-content-center brd-r">
+
+            <!-- ITEMS COL -->
+            <div id="items" class="brd-b">
+
+                <header></header>
+
+                <!-- alert -->
+                <div class="b-alert"></div>
+
+                <!-- search -->
+                <div class="src"></div>
+
+                <!-- contacts list  -->
+                <div class="contacts"></div>
+            </div>
+
+            <!-- CHAT COL -->
+            <div id="chat" class="d-flex flex-column justify-content-between brd-b">
+
+                <header></header>
+
+                <!-- messages portview -->
+                <div class="messages">
+                    
+                </div>
+
+                <footer></footer>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

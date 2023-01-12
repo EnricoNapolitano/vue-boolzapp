@@ -5,12 +5,79 @@
     --grey-bg: #dbdbd3;
     --grey-hd: #eaeaea;
     --grey-ft: #f3eeea;
+    --grey-src: #fafafa;
     --blue-alert: #8edafc;
 }
 
-/***** GRAPHICS ****/
+
+
+/**** GRAPHICS ****/
 .main-bg {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(var(--green-bg) 15%, var(--grey-bg) 15%);
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+/**** GENERICS ****/
+header {
+    background-color: var(--grey-hd);
+    height: 70px;
+}
+
+
+
+/**** UTILS ****/
+.brd-r {
+    border: 1px dashed red;
+}
+.brd-b {
+    border: 1px dashed blue;
+}
+.brd-y {
+    border: 1px dashed yellow;
+}
+
+
+
+/**** UI ****/
+#ui {
+    margin: 0 auto;
+    width : 90vw;
+    height: 90vh;
+}
+/* items */
+#items {
+    width: 30%;
+    background-color: white;
+}
+#chat {
+    width: 70%;
+}
+.b-alert {
+    height: 80px;
+    background-color: var(--blue-alert);
+}
+.src {
+    height: 50px;
+    background-color: var(--grey-src);
+}
+.contacts {
+    height: calc(90vh - 200px);
+    overflow-y: scroll;
+}
+/* chat */
+.messages {
+    height: calc(90vh - 140px);
+    background-color: yellow;
+    background-image: url("img/mine.jpg");
+    overflow-y: scroll;
+}
+footer {
+    height: 70px;
+    background-color: var(--grey-ft);
 }
