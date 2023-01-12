@@ -7,3 +7,10 @@
     --grey-ft: #f3eeea;
     --blue-alert: #8edafc;
 }
+
+/***** GRAPHICS ****/
+.main-bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(var(--green-bg) 15%, var(--grey-bg) 15%);
+}
