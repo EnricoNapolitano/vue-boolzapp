@@ -95,14 +95,17 @@ const app = Vue.createApp({
         }
     },
     computed: {
+        currContact(){
+            return this.contacts[this.currIndex];
+        },
         currAvatar(){
-            return this.contacts[this.currIndex].avatar;
+            return this.currContact.avatar;
         },
         currContactName(){
-            return this.contacts[this.currIndex].name;
+            return this.currContact.name;
         },
         currMessages(){
-            return this.contacts[this.currIndex].messages
+            return this.currContact.messages
         },
         newMsgObj() {
             return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
