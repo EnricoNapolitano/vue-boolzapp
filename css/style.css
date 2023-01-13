@@ -132,7 +132,6 @@ header span {
     overflow-y: scroll;
 }
 .msg-area{
-    width: 300px;
     padding: 15px;
     border-radius: 10px;
     margin: 20px;
@@ -157,6 +156,7 @@ header span {
 /* received messages */
 .received {
     padding-left: 40px;
+    display: flex;
 }
 .received .msg-area{
     background-color: white;
