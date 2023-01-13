@@ -57,14 +57,14 @@
                 </div>
 
                 <!-- contacts list  -->
-                <div class="contacts">
-                    <div v-for="(contact, i) in contacts" class="contact d-flex" @click="setCurrIndex(i)">
+                <ul class="contacts">
+                    <li v-for="(contact, i) in contacts" class="contact d-flex" @click="setCurrIndex(i)">
                         <div class="circle-frame ms-3 mt-3">
                             <img class="img-fluid" v-bind:src="`img/avatar${contact.avatar}.jpg`" alt="`foto di ${contact.name}`">
                         </div>
                         <span class="ps-2 pt-3">{{ contact.name }}</span>
-                    </div>
-                </div>
+                    </dli>
+                </ul>
             </div>
 
             <!-- CHAT COL -->
@@ -74,11 +74,11 @@
                     <!-- specific user you're chatting with -->
                     <div class="d-flex align-items-center">
                         <div class="circle-frame ms-4">
-                            <img class="img-fluid" src="img/avatar_1.jpg" alt="foto Michele">
+                            <img class="img-fluid" :src="`img/avatar${currAvatar}.jpg`" alt="foto Michele">
                         </div>
                         <div>
                             <span class="ps-4">{{ currContactName }}</span>
-                            <span class="last-message d-block ps-4">Ultimo messaggio alle</span>
+                            <span class="last-message d-block ps-4">Ultimo messaggio alle {{  }} </span>
                         </div>
                     </div>
                     <!-- icons -->
@@ -93,12 +93,12 @@
                 <div class="messages">
 
                     <!-- messages -->
-                    <!-- <div :class="currStatus">
+                    <div v-for="(msg, i) in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
                         <div class="msg-area">
-                            <span>Hai portato a spasso il cane?</span>
-                            <span class="time">01/12/2023 16:55</span>
+                            <span>{{ msg.text }}</span>
+                            <span class="time">{{ msg.date }}</span>
                         </div>
-                    </div> -->
+                    </div>
 
                 </div>
 

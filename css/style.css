@@ -34,6 +34,9 @@ input {
     border: none;
     height: 35px;
 }
+ul {
+    padding: 0;
+}
 
 
 

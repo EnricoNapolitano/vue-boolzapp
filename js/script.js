@@ -88,19 +88,25 @@ const app = Vue.createApp({
                   }
                   ],
                 },
-            ]
+            ],
         }
     },
     computed: {
+        currAvatar(){
+            return this.contacts[this.currIndex].avatar;
+        },
         currContactName(){
             return this.contacts[this.currIndex].name;
+        },
+        currMessages(){
+            return this.contacts[this.currIndex].messages
         }
     },
     methods: {
         setCurrIndex(index) {
             this.currIndex = index;
         }
-    }
+    },
 });
 
 app.mount('#ui');
