@@ -1,5 +1,7 @@
 console.log('ok ' + Vue);
 
+const dateTime = luxon.DateTime;
+
 const app = Vue.createApp({
     data(){
         return {
@@ -103,7 +105,7 @@ const app = Vue.createApp({
             return this.contacts[this.currIndex].messages
         },
         newMsgObj() {
-            return {date: 123123, text: this.newMsg, status: 'sent'}
+            return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
         },
     },
     methods: {
@@ -115,6 +117,9 @@ const app = Vue.createApp({
                 this.currMessages.push(this.newMsgObj);
                 this.newMsg = '';
             }
+        },
+        getCurrTime(){
+            return dateTime.now().setLocale('it').toLocaleString(dateTime.DATETIME_SHORT);
         }
     },
 });
