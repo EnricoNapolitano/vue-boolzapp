@@ -25,21 +25,6 @@
 
 
 
-/**** GENERICS ****/
-header {
-    background-color: var(--grey-hd);
-    height: 70px;
-}
-input {
-    border: none;
-    height: 35px;
-}
-ul {
-    padding: 0;
-}
-
-
-
 /**** FONT AWESOME ****/
 .fa-solid {
     font-size: 25px;
@@ -59,6 +44,21 @@ footer .fa-solid,
 footer .fa-regular {
     font-size: 32px;
     color: var(--grey-icn);
+}
+
+
+
+/**** GENERICS ****/
+header {
+    background-color: var(--grey-hd);
+    height: 70px;
+}
+input {
+    border: none;
+    height: 35px;
+}
+ul {
+    padding: 0;
 }
 
 
@@ -137,6 +137,14 @@ header span {
     border-radius: 10px;
     margin: 20px;
 }
+/* area message */
+.msg-area span.time {
+    font-size: 12px;
+    color: var(--grey-icn);
+    text-align: right;
+    display:block;
+}
+/* sent messages */
 .sent {
     padding-right: 40px;
     display: flex;
@@ -146,18 +154,14 @@ header span {
 .sent .msg-area {
     background-color: var(--green-sent-msg);
 }
+/* received messages */
 .received {
     padding-left: 40px;
 }
 .received .msg-area{
     background-color: white;
 }
-.msg-area span.time {
-    font-size: 12px;
-    color: var(--grey-icn);
-    text-align: right;
-    display:block;
-}
+/* footer */
 footer {
     height: 70px;
     background-color: var(--grey-ft);
