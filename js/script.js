@@ -3,6 +3,7 @@ console.log('ok ' + Vue);
 const app = Vue.createApp({
     data(){
         return {
+            newMsg: '',
             currIndex: 0,
             user: {
                 name: 'Enrico',
@@ -100,11 +101,20 @@ const app = Vue.createApp({
         },
         currMessages(){
             return this.contacts[this.currIndex].messages
-        }
+        },
+        newMsgObj() {
+            return {date: 123123, text: this.newMsg, status: 'sent'}
+        },
     },
     methods: {
         setCurrIndex(index) {
             this.currIndex = index;
+        },
+        sendMessage(){
+            if(this.newMsg){
+                this.currMessages.push(this.newMsgObj);
+                this.newMsg = '';
+            }
         }
     },
 });
