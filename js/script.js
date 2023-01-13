@@ -92,8 +92,8 @@ const app = Vue.createApp({
         }
     },
     computed: {
-        currStatus(){
-
+        currContactName(){
+            return this.contacts[this.currIndex].name;
         }
     },
     methods: {
