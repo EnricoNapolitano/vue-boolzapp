@@ -37,17 +37,7 @@ input {
 
 
 
-/**** UTILS ****/
-.brd-r {
-    border: 1px dashed red;
-}
-.brd-b {
-    border: 1px dashed blue;
-}
-.brd-y {
-    border: 1px dashed yellow;
-}
-/* font awesome */
+/**** FONT AWESOME ****/
 .fa-solid {
     font-size: 25px;
     padding: 10px;
@@ -77,7 +67,10 @@ footer .fa-regular {
     height: 90vh;
     box-shadow: 0px 0px 6px rgb(100, 100, 100);
 }
-/* ITEMS */
+
+
+
+/**** ITEMS ****/
 #items {
     width: 30%;
     background-color: white;
@@ -120,7 +113,10 @@ header span {
     padding-bottom: 15px;
     border-bottom: 2px solid var(--grey-src);
 }
-/* CHAT */
+
+
+
+/**** CHAT ****/
 #chat {
     width: 70%;
 }
@@ -138,10 +134,19 @@ header span {
     border-radius: 10px;
     margin: 20px;
 }
-.sent-msg .msg-area {
+.sent {
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.sent .msg-area {
     background-color: var(--green-sent-msg);
 }
-.received-msg .msg-area{
+.received {
+    padding-left: 40px;
+}
+.received .msg-area{
     background-color: white;
 }
 .msg-area span.time {
