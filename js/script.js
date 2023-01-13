@@ -107,6 +107,9 @@ const app = Vue.createApp({
         newMsgObj() {
             return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
         },
+        contactAnswer(){
+            return {date: this.getCurrTime(), text: 'ok', status: 'received'}
+        }
     },
     methods: {
         setCurrIndex(index) {
@@ -116,6 +119,9 @@ const app = Vue.createApp({
             if(this.newMsg){
                 this.currMessages.push(this.newMsgObj);
                 this.newMsg = '';
+                setTimeout(()=>{
+                    this.currMessages.push(this.contactAnswer);
+                }, 1000);
             }
         },
         getCurrTime(){
