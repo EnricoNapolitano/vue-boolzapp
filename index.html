@@ -95,12 +95,12 @@
                 <div class="messages">
 
                     <!-- messages -->
-                    <div v-for="msg in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
-                        <div class="msg-area">
+                    <ul v-for="msg in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
+                        <li class="msg-area">
                             <span>{{ msg.text }}</span>
                             <span class="time">{{ msg.date }}</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
                 </div>
 
