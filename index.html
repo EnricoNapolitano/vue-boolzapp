@@ -54,18 +54,20 @@
 
                 <!-- search -->
                 <div class="src d-flex justify-content-center align-items-center">
-                    <input type="text" placeholder="cerca o inizia una nuova chat">
+                    <input type="text" placeholder="cerca o inizia una nuova chat" v-model="search" @keyup="filterContacts">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
 
                 <!-- contacts list  -->
                 <ul class="contacts">
-                    <li v-for="(contact, i) in contacts" class="contact d-flex" @click="setCurrIndex(i)">
-                        <div class="circle-frame ms-3 mt-3">
-                            <img class="img-fluid" v-bind:src="`img/avatar${contact.avatar}.jpg`" alt="`foto di ${contact.name}`">
+                    <li v-for="(contact, i) in contacts" @click="setCurrIndex(i)">
+                        <div v-if="contact.visible" class="contact d-flex">
+                            <div class="circle-frame ms-3 mt-3">
+                                <img class="img-fluid" v-bind:src="`img/avatar${contact.avatar}.jpg`" alt="`foto di ${contact.name}`">
+                            </div>
+                            <span class="ps-2 pt-3">{{ contact.name }}</span>
                         </div>
-                        <span class="ps-2 pt-3">{{ contact.name }}</span>
-                    </dli>
+                    </li>
                 </ul>
             </div>
 

@@ -5,6 +5,7 @@ const dateTime = luxon.DateTime;
 const app = Vue.createApp({
     data(){
         return {
+            search: '',
             newMsg: '',
             currIndex: 0,
             user: {
@@ -129,6 +130,16 @@ const app = Vue.createApp({
         },
         getCurrTime(){
             return dateTime.now().setLocale('it').toLocaleString(dateTime.DATETIME_SHORT);
+        },
+        filterContacts(){
+            return this.contacts.forEach((contact) =>{
+                if(!contact.name.toLowerCase().includes(this.search.toLowerCase())){
+                    contact.visible = false;
+                } 
+                if(!this.search) {
+                    this.contacts.forEach((contact) => contact.visible = true)
+                }
+            });
         }
     },
 });
