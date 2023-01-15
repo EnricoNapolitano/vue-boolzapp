@@ -70,7 +70,7 @@ input {
 input:focus {
     outline-style: none;
     border: 2px solid var(--blue-alert);
-  }
+}
 ul {
     padding: 0;
 }
