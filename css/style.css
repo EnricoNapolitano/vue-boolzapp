@@ -98,6 +98,9 @@ header span {
     border-radius: 50%;
     overflow: hidden;
 }
+.bell.circle-frame {
+    overflow: unset;
+}
 .bell {
     background-color: white;
 }
