@@ -92,6 +92,84 @@ const app = Vue.createApp({
                   }
                   ],
                 },
+                {
+                    name: 'Alessandro L.',
+                    avatar: '_5',
+                    visible: true,
+                    messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    text: 'Ricordati di chiamare la nonna',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    text: 'Va bene, stasera la sento',
+                    status: 'received'
+                    }
+                    ],
+                },
+                {
+                    name: 'Claudia',
+                    avatar: '_6',
+                    visible: true,
+                    messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    text: 'Ciao Claudia, hai novità?',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    text: 'Non ancora',
+                    status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:51:00',
+                    text: 'Nessuna nuova, buona nuova',
+                    status: 'sent'
+                    }
+                    ],
+                },
+                {
+                    name: 'Federico',
+                    avatar: '_7',
+                    visible: true,
+                    messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    text: 'Fai gli auguri a Martina che è il suo compleanno!',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    text: 'Grazie per avermelo ricordato, le scrivo subito!',
+                    status: 'received'
+                    }
+                    ],
+                },
+                {
+                    name: 'Davide',
+                    avatar: '_8',
+                    visible: true,
+                    messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    text: 'Ciao, andiamo a mangiare la pizza stasera?',
+                    status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    text: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:51:00',
+                    text: 'OK!!',
+                    status: 'received'
+                    }
+                    ],
+                }
             ],
         }
     },
