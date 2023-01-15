@@ -114,7 +114,7 @@ const app = Vue.createApp({
         },
         contactAnswer(){
             return {date: this.getCurrTime(), text: 'ok', status: 'received'}
-        }
+        },
     },
     methods: {
         setCurrIndex(index) {
@@ -144,6 +144,12 @@ const app = Vue.createApp({
         deleteMsg(index){
             this.currMessages[index].date = '';
             this.currMessages[index].text = 'Questo messaggio è stato cancellato';
+        },
+        getLastMsg(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].text.slice(0, 20) + ' ...';
+        },
+        getLastMsgDate(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].date;
         }
     },
 });

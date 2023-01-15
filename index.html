@@ -61,11 +61,15 @@
                 <!-- contacts list  -->
                 <ul class="contacts">
                     <li v-for="(contact, i) in contacts" @click="setCurrIndex(i)">
-                        <div v-if="contact.visible" class="contact d-flex">
+                        <div v-if="contact.visible" class="contact d-flex align-items-center">
                             <div class="circle-frame ms-3 mt-3">
                                 <img class="img-fluid" v-bind:src="`img/avatar${contact.avatar}.jpg`" alt="`foto di ${contact.name}`">
                             </div>
-                            <span class="ps-2 pt-3">{{ contact.name }}</span>
+                            <div>
+                                <span class="ps-2 fw-bold">{{ contact.name }}</span>
+                                <div class="ps-2">{{ getLastMsg(i) }}</div>
+                                <div class="time ps-2">{{ getLastMsgDate(i) }}</div>
+                            </div>
                         </div>
                     </li>
                 </ul>
