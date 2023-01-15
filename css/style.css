@@ -51,6 +51,8 @@ footer .fa-regular {
 }
 .fa-solid.fa-chevron-down {
     font-size: 18px;
+    padding: 0;
+    padding-left: 10px;
 }
 
 
