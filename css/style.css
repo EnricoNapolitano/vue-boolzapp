@@ -185,8 +185,13 @@ header span {
     padding-left: 40px;
     display: flex;
 }
-.received .msg-area{
+.received .msg-area {
     background-color: white;
+}
+.msg-area .deleted {
+    font-style: italic;
+    font-size: 15px;
+    color: var(--grey-icn);
 }
 /* footer */
 footer {

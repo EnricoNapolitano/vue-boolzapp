@@ -5,6 +5,7 @@ const dateTime = luxon.DateTime;
 const app = Vue.createApp({
     data(){
         return {
+            isClicked: false,
             search: '',
             newMsg: '',
             currIndex: 0,
@@ -140,6 +141,13 @@ const app = Vue.createApp({
                     this.contacts.forEach((contact) => contact.visible = true)
                 }
             });
+        },
+        getMsgMenu(index){
+            this.currMessages[index].isClicked = !this.currMessages[index].isClicked;
+        },
+        deleteMsg(index){
+            this.currMessages[index].date = '';
+            this.currMessages[index].text = 'Questo messaggio è stato cancellato';
         }
     },
 });

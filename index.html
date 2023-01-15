@@ -99,11 +99,11 @@
                     <!-- messages -->
                     <ul v-for="(msg, i) in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
                         <li class="msg-area" @click="getMsgMenu(i)">
-                            <span>{{ msg.text }}</span>
-                            <i v-if="isClicked" class="fa-solid fa-chevron-down"></i>
-                            <ul v-if?="isClicked" class="msg-menu shadow">
+                            <span :class="{'deleted' : msg.text.includes('Questo')}">{{ msg.text }}</span>
+                            <i v-if="msg.isClicked && !msg.text.includes('Questo')" class="fa-solid fa-chevron-down"></i>
+                            <ul v-if?="msg.isClicked && !msg.text.includes('Questo')" class="msg-menu shadow">
                                 <li role="button">Message info</li>
-                                <li role="button">Delete message</li>
+                                <li role="button" @click="deleteMsg(i)">Delete message</li>
                             </ul>
                             <span class="time">{{ msg.date }}</span>
                         </li>
