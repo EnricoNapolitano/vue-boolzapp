@@ -5,7 +5,6 @@ const dateTime = luxon.DateTime;
 const app = Vue.createApp({
     data(){
         return {
-            isClicked: false,
             search: '',
             newMsg: '',
             currIndex: 0,
