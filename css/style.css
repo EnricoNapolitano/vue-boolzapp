@@ -64,9 +64,13 @@ header {
     border-right: 1px solid var(--grey-bg);
 }
 input {
-    border: none;
+    border: 2px solid transparent;
     height: 35px;
 }
+input:focus {
+    outline-style: none;
+    border: 2px solid var(--blue-alert);
+  }
 ul {
     padding: 0;
 }
