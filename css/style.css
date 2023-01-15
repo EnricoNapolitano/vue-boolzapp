@@ -151,13 +151,16 @@ header span {
     background-image: url("../img/mine.jpg");
     overflow-y: scroll;
 }
+/* area message */
 .msg-area{
     padding: 15px;
     border-radius: 10px;
     margin: 20px;
     position: relative;
 }
-/* area message */
+div.messages ul {
+    margin-top: 50px;
+}
 .time {
     font-size: 12px;
     color: var(--grey-icn);
