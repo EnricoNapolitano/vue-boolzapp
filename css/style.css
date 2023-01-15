@@ -146,6 +146,7 @@ header span {
     padding: 15px;
     border-radius: 10px;
     margin: 20px;
+    position: relative;
 }
 /* area message */
 .msg-area span.time {
@@ -153,6 +154,21 @@ header span {
     color: var(--grey-icn);
     text-align: right;
     display:block;
+}
+.msg-menu {
+    width: 150px;
+    height: 90px;
+    padding-left: 20px;
+    background-color: var(--grey-src);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-9%, 63%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 /* sent messages */
 .sent {

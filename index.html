@@ -72,7 +72,7 @@
             </div>
 
             <!-- CHAT COL -->
-            <div id="chat" class="d-flex flex-column justify-content-between ">
+            <div id="chat">
 
                 <header class="d-flex justify-content-between align-items-center">
                     <!-- specific user you're chatting with -->
@@ -97,9 +97,14 @@
                 <div class="messages">
 
                     <!-- messages -->
-                    <ul v-for="msg in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
-                        <li class="msg-area">
+                    <ul v-for="(msg, i) in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
+                        <li class="msg-area" @click="getMsgMenu(i)">
                             <span>{{ msg.text }}</span>
+                            <i v-if="isClicked" class="fa-solid fa-chevron-down"></i>
+                            <ul v-if?="isClicked" class="msg-menu shadow">
+                                <li role="button">Message info</li>
+                                <li role="button">Delete message</li>
+                            </ul>
                             <span class="time">{{ msg.date }}</span>
                         </li>
                     </ul>
