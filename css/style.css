@@ -82,7 +82,6 @@ li {
     margin: 0 auto;
     width : 90vw;
     height: 90vh;
-    box-shadow: 0px 0px 15px rgba(100, 100, 100, 0.2);
 }
 
 
@@ -190,6 +189,17 @@ header span {
 .sent .msg-area {
     background-color: var(--green-sent-msg);
 }
+.sent .msg-area:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    border-style: solid;
+    border-width: 27px 29px 0 0;
+    border-color: var(--green-sent-msg) transparent transparent transparent;
+    top: 0;
+    right: -20px;
+}
 /* received messages */
 .received {
     padding-left: 40px;
@@ -197,6 +207,16 @@ header span {
 }
 .received .msg-area {
     background-color: white;
+}
+.received .msg-area:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-style: solid;
+    border-width: 0 29px 27px 0;
+    border-color: transparent #fff transparent transparent;
+    top: 0;
+    left: -20px;
 }
 .msg-area .deleted {
     font-style: italic;
