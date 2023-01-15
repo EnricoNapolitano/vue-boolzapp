@@ -134,12 +134,8 @@ const app = Vue.createApp({
         },
         filterContacts(){
             return this.contacts.forEach((contact) =>{
-                if(!contact.name.toLowerCase().includes(this.search.toLowerCase())){
-                    contact.visible = false;
-                } 
-                if(!this.search) {
-                    this.contacts.forEach((contact) => contact.visible = true)
-                }
+                if(!contact.name.toLowerCase().includes(this.search.toLowerCase())) contact.visible = false;
+                if(!this.search) this.contacts.forEach((contact) => contact.visible = true)
             });
         },
         getMsgMenu(index){
