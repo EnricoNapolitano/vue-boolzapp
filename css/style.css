@@ -236,13 +236,22 @@ div.messages ul {
 }
 /* emoji */
 .emoji {
-    width: 100%;
+    width: calc(100% - 18px);
     height: 150px;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 -5px 10px rgba(128, 128, 128, 0.3);
     background-color: var(--grey-icn);
     position: absolute;
     bottom: 70px;
+    display: none;
+    overflow: overlay;
+}
+.show {
+    display: block;
+}
+.emoji ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 /* footer */
 footer {

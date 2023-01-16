@@ -120,11 +120,14 @@
                 </div>
 
                 <!-- emoji list -->
-                <!-- <div class="emoji">
-                </div> -->
+                <div class="emoji" :class="{'show' : show }">
+                    <ul>
+                        <li v-for="emoji in emojis" class="p-1"> {{ emoji }} </li>
+                    </ul>
+                </div>
                 
                 <footer class="d-flex justify-content-between align-items-center">
-                    <i class="fa-regular fa-face-smile ps-4"></i>
+                    <i class="fa-regular fa-face-smile ps-4" @click="showEmoji"></i>
                     <div class="message-input">
                         <input class="w-100 ps-4" type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.enter="sendMessage">
                     </div>
