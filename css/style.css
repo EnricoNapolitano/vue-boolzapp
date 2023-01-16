@@ -151,6 +151,7 @@ header span {
 }
 .last-message {
     font-size: 15px;
+    display: block;
 }
 .messages {
     height: calc(90vh - 140px);

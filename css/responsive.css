@@ -1,0 +1,41 @@
+@media screen and (max-width: 992px){
+    .fa-circle-notch, .fa-message {
+        display: none;
+    }
+    #items input::-webkit-input-placeholder {
+        color: white;
+    }
+}
+@media screen and (max-width: 900px){
+    .b-alert span {
+        display: none;
+    }
+}
+@media screen and (max-width: 720px){
+    header .fa-magnifying-glass, .fa-paperclip {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px){
+    #items {
+        width: 40%;
+    }
+    #chat {
+        width: 60%;
+    }
+    .last-message {
+        display: none;
+    }
+}
+@media screen and (max-width: 576px){
+    #items {
+        width: 100%;
+    }
+    #chat {
+        display: none;
+    }
+    #items input::-webkit-input-placeholder {
+        color: var(--grey-icn);
+    }
+}
+

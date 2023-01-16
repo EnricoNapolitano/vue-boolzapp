@@ -17,6 +17,8 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- script -->
     <script defer src="js/script.js"></script> 
+    <!-- media query -->
+    <link rel="stylesheet" defer href="css/responsive.css">
 </head>
 <body>
     <div class="main-bg">
@@ -86,7 +88,7 @@
                         </div>
                         <div>
                             <span class="ps-4">{{ currContactName }}</span>
-                            <span class="last-message d-block ps-4">Ultimo accesso: {{ getCurrTime() }}</span>
+                            <span class="last-message ps-4">Ultimo accesso: {{ getCurrTime() }}</span>
                         </div>
                     </div>
                     <!-- icons -->
