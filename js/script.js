@@ -207,6 +207,7 @@ const app = Vue.createApp({
             if(this.newMsg){
                 this.currMessages.push(this.newMsgObj);
                 this.newMsg = '';
+                this.show = false;
                 setTimeout(()=>{
                     this.currMessages.push(this.contactAnswer);
                 }, 1000);
@@ -239,6 +240,9 @@ const app = Vue.createApp({
         },
         showEmoji(){
             this.show = !this.show;
+        },
+        getEmoji(index){
+            this.newMsg += this.emojis[index];
         }
     },
 });

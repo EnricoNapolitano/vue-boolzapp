@@ -17,8 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
     <!-- vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- emoji Vue 2 -->
-    <script src="https://unpkg.com/vue-emoji-picker/dist/vue-emoji-picker.js"></script>
     <!-- script -->
     <script defer src="js/script.js"></script> 
 </head>
@@ -122,7 +120,7 @@
                 <!-- emoji list -->
                 <div class="emoji" :class="{'show' : show }">
                     <ul>
-                        <li v-for="emoji in emojis" class="p-1"> {{ emoji }} </li>
+                        <li v-for="(emoji, i) in emojis" class="p-1" @click="getEmoji(i)"> {{ emoji }} </li>
                     </ul>
                 </div>
                 
