@@ -188,10 +188,7 @@ const app = Vue.createApp({
         },
         newMsgObj() {
             return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
-        },
-        contactAnswer(){
-            return {date: this.getCurrTime(), text: 'ok', status: 'received'}
-        },
+        }
     },
     methods: {
         setCurrIndex(index) {
@@ -211,8 +208,9 @@ const app = Vue.createApp({
         },
         filterContacts(){
             return this.contacts.forEach((contact) =>{
-                if(!contact.name.toLowerCase().includes(this.search.toLowerCase())) contact.visible = false;
-                if(contact.name.toLowerCase().includes(this.search.toLowerCase())) contact.visible = true;
+                const isMatchingName = contact.name.toLowerCase().includes(this.search.toLowerCase())
+                if(!isMatchingName) contact.visible = false;
+                if(isMatchingName) contact.visible = true;
             });
         },
         getMsgMenu(index){
