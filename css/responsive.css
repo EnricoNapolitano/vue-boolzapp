@@ -31,6 +31,9 @@
     #items {
         width: 100%;
     }
+    .b-alert span {
+        display: block;
+    }
     #chat {
         display: none;
     }
