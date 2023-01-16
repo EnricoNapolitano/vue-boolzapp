@@ -15,14 +15,14 @@
     header .fa-magnifying-glass, .fa-paperclip {
         display: none;
     }
-}
-@media screen and (max-width: 600px){
     #items {
         width: 40%;
     }
     #chat {
         width: 60%;
     }
+}
+@media screen and (max-width: 600px){
     .last-message {
         display: none;
     }
