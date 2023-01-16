@@ -148,6 +148,7 @@ header span {
 /**** CHAT ****/
 #chat {
     width: 70%;
+    position: relative;
 }
 .last-message {
     font-size: 15px;
@@ -232,6 +233,16 @@ div.messages ul {
     font-style: italic;
     font-size: 15px;
     color: var(--grey-icn);
+}
+/* emoji */
+.emoji {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 10px rgba(128, 128, 128, 0.3);
+    background-color: var(--grey-icn);
+    position: absolute;
+    bottom: 70px;
 }
 /* footer */
 footer {
