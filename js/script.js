@@ -225,10 +225,12 @@ const app = Vue.createApp({
             this.currMessages[index].text = 'Questo messaggio è stato cancellato';
         },
         getLastMsg(index) {
-            return this.contacts[index].messages[this.contacts[index].messages.length - 1].text.slice(0, 20) + ' ...';
+            const lastChatMsg = this.contacts[index].messages[this.contacts[index].messages.length - 1].text;
+            return lastChatMsg.length < 20 ? lastChatMsg.slice(0, 20) : lastChatMsg.slice(0, 20)  + ' ...' ;
         },
         getLastMsgDate(index) {
-            return this.contacts[index].messages[this.contacts[index].messages.length - 1].date;
+            const lastChatDate = this.contacts[index].messages[this.contacts[index].messages.length - 1].date;
+            return lastChatDate;
         }
     },
 });
