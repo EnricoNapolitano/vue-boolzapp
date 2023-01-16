@@ -101,7 +101,7 @@
                 <div class="messages">
 
                     <!-- messages -->
-                    <ul v-for="(msg, i) in currMessages" :class="msg.status === 'sent' ? 'sent' : 'received'">
+                    <ul v-for="(msg, i) in currMessages" :class="msg.status">
                         <li class="msg-area" @click="getMsgMenu(i)">
                             <span :class="{'deleted' : msg.text.includes('Questo')}">{{ msg.text }}</span>
                             <i v-if="msg.isClicked && !msg.text.includes('Questo')" class="fa-solid fa-chevron-down"></i>
