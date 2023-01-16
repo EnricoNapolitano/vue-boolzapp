@@ -192,6 +192,9 @@ const app = Vue.createApp({
         },
         newMsgObj() {
             return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
+        },
+        contactAnswer(){
+            return {date: this.getCurrTime(), text: 'ok', status: 'received'}
         }
     },
     methods: {
@@ -236,3 +239,4 @@ const app = Vue.createApp({
 });
 
 app.mount('#ui');
+
