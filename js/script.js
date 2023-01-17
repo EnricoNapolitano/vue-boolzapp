@@ -192,24 +192,26 @@ const app = Vue.createApp({
         currMessages(){
             return this.currContact.messages
         },
-        newMsgObj() {
-            return {date: this.getCurrTime(), text: this.newMsg, status: 'sent'}
-        },
-        contactAnswer(){
-            return {date: this.getCurrTime(), text: 'ok', status: 'received'}
-        }
     },
     methods: {
         setCurrIndex(index) {
             this.currIndex = index;
         },
+        AddMsg(text, status){
+            //create a message object suitable for user and bot
+            const msgObj = {date: this.getCurrTime(), text: text, status: status}
+            return this.currMessages.push(msgObj);
+        },
         sendMessage(){
             if(this.newMsg){
-                this.currMessages.push(this.newMsgObj);
-                this.newMsg = '';
-                this.show = false;
+                
+                this.AddMsg(this.newMsg, 'sent' );
+                this.newMsg = ''; // clean input message
+                this.show = false; // it closes the emoji's window
+
+                //bot answers
                 setTimeout(()=>{
-                    this.currMessages.push(this.contactAnswer);
+                    this.AddMsg('ok', 'received')
                 }, 1000);
             }
         },
