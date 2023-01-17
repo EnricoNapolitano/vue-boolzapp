@@ -218,9 +218,7 @@ const app = Vue.createApp({
         },
         filterContacts(){
             return this.contacts.forEach((contact) =>{
-                const isMatchingName = contact.name.toLowerCase().includes(this.search.toLowerCase())
-                if(!isMatchingName) contact.visible = false;
-                if(isMatchingName) contact.visible = true;
+                contact.visible = contact.name.toLowerCase().includes(this.search.toLowerCase())
             });
         },
         getMsgMenu(index){
