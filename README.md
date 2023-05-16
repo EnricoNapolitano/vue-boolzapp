@@ -4,8 +4,8 @@ Boolzapp is a reimagined replica of WhatsApp. This project is built using HTML, 
 Feel free to explore and enjoy the project by sending messages and emojis. <br>
 You can access it here: https://enriconapolitano.github.io/vue-boolzapp/
 
-<img src="preview/preview.png">
-<img src="preview/preview-winning.png">
+<img src="preview.png">
+<img src="preview-2.png">
 
 
 
